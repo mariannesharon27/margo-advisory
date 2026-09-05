@@ -16,7 +16,7 @@ import { Loader2 } from 'lucide-react';
  * underlying URL secret.
  */
 const FORM_SRC =
-  'https://margo-advsiory-770713415904.asia-southeast1.run.app/?survey=only';
+  'https://margo-advsiory-enquiry-form.ai.studio/?survey=only';
 
 export const FormPage: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
