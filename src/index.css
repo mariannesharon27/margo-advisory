@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    /* Offset anchor jumps by roughly the fixed header's height, no more: each
+       section already carries py-12, which supplies the breathing room above
+       its title. Overshooting here stacks on top of that padding and leaves a
+       conspicuous empty band. Header measures 81px on phones, 102px around
+       md (links and both buttons share a row), 82px on wide desktop. */
+    scroll-padding-top: 5.25rem;
+  }
+
+  /* Around md the header wraps taller, so the offset follows it. */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    html {
+      scroll-padding-top: 6.5rem;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FDFBF7;
+    color: #121824;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Custom subtle glass & champagne effects */
+.bg-ivory-warm {
+  background-color: #FDFBF7;
+}
+
+.bg-ivory-card {
+  background-color: #FBF8F2;
+}
+
+.bg-champagne-light {
+  background-color: #FAF5EA;
+}
+
+.text-champagne-gold {
+  color: #B89343;
+}
+
+.bg-champagne-gold {
+  background-color: #C5A059;
+}
+
+.border-champagne-subtle {
+  border-color: rgba(197, 160, 89, 0.25);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #2C2214 0%, #C5A059 50%, #8C6F32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-accent-line {
+  background: linear-gradient(90deg, #C5A059 0%, rgba(197, 160, 89, 0.2) 100%);
+}
+
+/* Custom subtle grain background for editorial luxury feel */
+.bg-editorial-grain {
+  background-image: radial-gradient(rgba(197, 160, 89, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #E2D1A8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Margo Advisory",
+  "description": "Personal financial advisory brand making financial decisions clearer, warmer, and approachable.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
